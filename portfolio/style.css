@@ -1,0 +1,290 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #7c7c7f;
+    color: #303031;
+}
+
+/* Links */
+a {
+    color: #303031;
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 9%;
+    background: #a8a9ad;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbar ul li:hover a,
+.navbar ul li:active a {
+    color: rgb(83, 138, 226);
+}
+
+/* Page Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+}
+
+.home-info h1 {
+    font-size: 55px;
+}
+
+.home-info h2 {
+    display: inline-block;
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+.home-info h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 0.7px #ffffff;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+
+@keyframes display-text {
+    25%, 100% {
+        display: none;
+    }
+}
+
+.home-info h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 2px solid #a8a9ad;
+    color: #a8a9ad;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%, 100% {
+        width: 0;
+    }
+
+    70%, 90% {
+        width: 100%;
+    }
+}
+
+.home-info p {
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+
+.home-info .btn-sci {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #a8a9ad;
+    border: 2px solid black;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #a8a9ad;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: transparent;
+    color: aliceblue;
+    box-shadow: none;
+}
+
+.home-info .btn-sci .sci {
+    margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    margin: 0 8px;
+}
+
+.home-info .btn-sci .sci a:hover {
+    background: #a8a9ad;
+    color: rgb(83, 138, 226);
+    box-shadow: 0 0 10px rgb(83, 138, 226);
+}
+
+/* About Section */
+.about {
+    padding: 80px 9%;
+    background-color: #a8a9ad;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.about-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.about-boxes .box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+.about-boxes .box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-boxes .box p {
+    font-size: 16px;
+}
+
+/* Interests Section */
+.interests {
+    padding: 80px 9%;
+    background-color: #7c7c7f;
+}
+
+.interests h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.interests p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.interests .interest-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.interests .interest-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.interests .interest-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.interests .interest-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.interests .interest-box .btn {
+    background-color: gray;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.interests .interest-box .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 9%;
+    background-color: #a8a9ad;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.contact ul {
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.contact ul li {
+    padding: 10px 0;
+}
